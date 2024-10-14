@@ -67,13 +67,13 @@ def classify_images(images_dir, results_dic, model):
                    
     """
     for key in results_dic in results_dic.items():
-       image_path = images_dir+key
+       image_path = images_dir + '/' + key
        model_label = classifier(image_path, model)
        model_label = model_label.lower().strip()
        truth = results_dic[key][0]
+        
        if truth in model_label:
            results_dic[[key][0]].extend([model_label, 1])
+           
        else:
            results_dic[[key][0]].extend([model_label, 0])
-    print(results_dic)
-    None 
