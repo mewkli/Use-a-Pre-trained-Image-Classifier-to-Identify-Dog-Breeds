@@ -62,3 +62,9 @@ def get_pet_labels(image_dir):
             print("** Warning: Key=", in_files[idx], "already exists in results_dic with value =", results_dic[in_files[idx]])
             
     return results_dic
+
+# Test the function
+if __name__ == "__main__":
+    image_folder = 'path_to_your_images_folder'
+    results = get_pet_labels(image_folder)
+    print(results)
