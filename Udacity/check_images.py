@@ -43,19 +43,19 @@ def main():
     # Measure total program runtime by collecting start time
     start_time = time()
     in_arg = get_input_args()
-    
-    check_command_line_arguments(in_arg)
+
+    # Placeholder for get_pet_labels() - Replace with actual implementation
     results = get_pet_labels(in_arg.dir)
     classify_images(in_arg.dir, results, in_arg.arch)
+
+    # Placeholder for adjust_results4_isadog() - Replace with actual implementation
     adjust_results4_isadog(results, in_arg.dogfile)
     results_stats = calculates_results_stats(results)
+
+    # Placeholder for print_results() - Replace with actual implementation
     print_results(results, results_stats, in_arg.arch, True, True)
-    
-    # Measure end time
     end_time = time()
     tot_time = end_time - start_time
-    
-    # Print overall runtime in seconds
     print("\nTotal Elapsed Runtime:", tot_time, "seconds.")
     
     hours = int(tot_time // 3600)
@@ -63,5 +63,6 @@ def main():
     seconds = int((tot_time % 3600) % 60)
     print("\nTotal Elapsed Runtime:", f"{hours:02}:{minutes:02}:{seconds:02}")
 
+# Call to main function to run the program
 if __name__ == "__main__":
     main()
