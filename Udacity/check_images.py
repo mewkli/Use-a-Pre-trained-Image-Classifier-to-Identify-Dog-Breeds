@@ -43,6 +43,8 @@ def main():
     # Measure total program runtime by collecting start time
     start_time = time()
     in_arg = get_input_args()
+    
+    check_command_line_arguments(in_arg)
     results = get_pet_labels(in_arg.dir)
     classify_images(in_arg.dir, results, in_arg.arch)
     adjust_results4_isadog(results, in_arg.dogfile)
