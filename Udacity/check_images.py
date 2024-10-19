@@ -42,7 +42,7 @@ from print_results import print_results
 def main():
     # Measure total program runtime by collecting start time
     start_time = time()
-        in_arg = get_input_args()
+    in_arg = get_input_args()
 
     # Function that checks command line arguments using in_arg  
     check_command_line_arguments(in_arg)
